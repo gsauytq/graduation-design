@@ -19,8 +19,13 @@ export default {
                 title: {
                     text: '消费者流量分析'
                 },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                },
                 series: [
                     {
+                        name: "消费者性别",
                         type: 'pie',
                         data: [
                             {
@@ -33,7 +38,7 @@ export default {
                             }
                         ]
                     }
-                ]
+                ],
             };
 
             myChartPie.setOption(option);

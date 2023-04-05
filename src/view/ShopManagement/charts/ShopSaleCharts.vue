@@ -8,13 +8,14 @@ import * as echarts from 'echarts';
 
 export default {
     name: "ShopSaleCharts",
+    props: ["title", "firstData", "secondData"],
     methods: {
         saleCharts() {
             var myIncomeAndExpensesChart = echarts.init(document.getElementById('income-and-expenses-analysis-panel'), 'westeros');
 
             var option = {
                 title: {
-                    text: '店铺收支数据分析'
+                    text: this.title + '数据分析'
                 },
                 xAxis: {
                     data: ['' + (moment().subtract(6, "months").month() + 1), 
@@ -26,11 +27,11 @@ export default {
                 },
                 yAxis: {},
                 legend: {
-                    data: ['收入', '支出'],
+                    data: [this.firstData + '', this.secondData + ''],
                 },
                 series: [
                     {
-                        name: '收入',
+                        name: this.firstData + '',
                         data: [10, 22, 28, 43, 49, 23],
                         type: 'line',
                         stack: 'x',
@@ -38,7 +39,7 @@ export default {
                         smooth: true
                     },
                     {
-                        name: '支出',
+                        name: this.secondData + '',
                         data: [5, 4, 3, 5, 7, 6],
                         type: 'line',
                         stack: 'x',

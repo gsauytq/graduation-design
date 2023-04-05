@@ -40,7 +40,7 @@
     <el-row :gutter="10" style="margin-top: 15px;">
         <el-col :span="12">
             <el-card style="height: 450px;" shadow="hover">
-                <ShopSaleCharts></ShopSaleCharts>
+                <ShopSaleCharts title="店铺收支" firstData="收入" secondData="支出"></ShopSaleCharts>
             </el-card>
         </el-col>
         <el-col :span="12">
@@ -77,6 +77,11 @@ export default {
         ConsumerCharts,
         ShopSaleCharts,
         ActivityCharts
+    },
+    methods: {
+        query() {
+            console.log("查询到所需要的数据");
+        }
     }
 }
 </script>

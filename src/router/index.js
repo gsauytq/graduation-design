@@ -6,6 +6,8 @@ import TrafficAnalysis from '../view/ShopManagement/TrafficAnalysis.vue'
 import AssociatorList from '../view/AssociatorManagement/AssociatorList.vue'
 import AssociatorInfoSetting from '../view/AssociatorManagement/AssociatorInfoSetting.vue'
 import StorageList from '../view/Storage/StorageList.vue'
+import StorageInfoSetting from '../view/Storage/StorageInfoSetting.vue'
+import StorageTraffic from '../view/Storage/StorageTraffic.vue'
  
 const routes = [
     {
@@ -22,6 +24,10 @@ const routes = [
         path: '/AssociatorInfoSetting', component: AssociatorInfoSetting
     }, {
         path: '/StorageList', component: StorageList
+    }, {
+        path: '/StorageInfoSetting', component: StorageInfoSetting
+    }, {
+        path: '/StorageTraffic', component: StorageTraffic
     }
 ]
 
