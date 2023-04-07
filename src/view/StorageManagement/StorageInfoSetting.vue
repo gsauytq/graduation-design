@@ -22,11 +22,15 @@
                 <el-button type="primary" @click="dialogVisible = true">添加仓库</el-button>
                 <el-dialog v-model="dialogVisible" title="添加仓库" width="30%">
                     <el-form :model="addStorageInfo" label-width="120px" :inline="true">
+                        <el-form-item required label="仓库编号：">
+                            <el-input v-model="addStorageInfo.id" class="add-form-style"
+                                placeholder="请输入仓库编号"></el-input>
+                        </el-form-item>
                         <el-form-item required label="仓库容量：">
                             <el-input v-model="addStorageInfo.storageVolume" class="add-form-style"
                                 placeholder="请输入仓库容量"></el-input>
                         </el-form-item>
-                        <el-form-item label="仓库状态：">
+                        <el-form-item required label="仓库状态：">
                             <el-radio-group v-model="addStorageInfo.status">
                                 <el-radio label="正在建设" />
                                 <el-radio label="运营中" />
@@ -72,7 +76,7 @@
 import { reactive } from 'vue';
 
 export default {
-    name: "ShopInfoSetting",
+    name: "StorageInfoSetting",
     data() {
         return {
             dialogVisible: false,
@@ -82,10 +86,11 @@ export default {
                 administrators: ""
             }),
             addStorageInfo: reactive({
-               storageVolume: "",
-               status: "",
-               summary: "",
-               administrators: ""
+                id: "",
+                storageVolume: "",
+                status: "",
+                summary: "",
+                administrators: ""
             }),
             tableData: [
 

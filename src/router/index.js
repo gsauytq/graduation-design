@@ -5,12 +5,20 @@ import ShopInfoSetting from '../view/ShopManagement/ShopInfoSetting.vue'
 import TrafficAnalysis from '../view/ShopManagement/TrafficAnalysis.vue'
 import AssociatorList from '../view/AssociatorManagement/AssociatorList.vue'
 import AssociatorInfoSetting from '../view/AssociatorManagement/AssociatorInfoSetting.vue'
-import StorageList from '../view/Storage/StorageList.vue'
-import StorageInfoSetting from '../view/Storage/StorageInfoSetting.vue'
-import StorageTraffic from '../view/Storage/StorageTraffic.vue'
- 
-const routes = [
-    {
+import StorageList from '../view/StorageManagement/StorageList.vue'
+import StorageInfoSetting from '../view/StorageManagement/StorageInfoSetting.vue'
+import StorageTraffic from '../view/StorageManagement/StorageTraffic.vue'
+import EmployeeList from '../view/EmployeeManagement/EmployeeList.vue'
+import EmployeeInfoSetting from '../view/EmployeeManagement/EmployeeInfoSetting.vue'
+import GoodsList from '../view/GoodsManagement/GoodsList.vue'
+import GoodsInfoSetting from '../view/GoodsManagement/GoodsInfoSetting.vue'
+import AdministratorsList from '../view/AdministratorsManagement/AdministratorsList.vue'
+import AdministratorsInfoSetting from '../view/AdministratorsManagement/AdministratorsInfoSetting.vue'
+
+const routes = [{
+        path: "/",
+        redirect: "/IndexPage",
+    }, {
         path: '/IndexPage', component: IndexPage
     }, {
         path: '/ShopList', component: ShopList
@@ -28,6 +36,18 @@ const routes = [
         path: '/StorageInfoSetting', component: StorageInfoSetting
     }, {
         path: '/StorageTraffic', component: StorageTraffic
+    }, {
+        path: '/EmployeeList', component: EmployeeList
+    }, {
+        path: '/EmployeeInfoSetting', component: EmployeeInfoSetting
+    }, {
+        path: '/GoodsList', component: GoodsList
+    }, {
+        path: '/GoodsInfoSetting', component: GoodsInfoSetting
+    }, {
+        path: '/AdministratorsList', component: AdministratorsList
+    }, {
+        path: '/AdministratorsInfoSetting', component: AdministratorsInfoSetting
     }
 ]
 

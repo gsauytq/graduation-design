@@ -52,8 +52,13 @@ export default {
                 title: {
                     text: '消费者流量分析'
                 },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                },
                 series: [
                     {
+                        name: "消费额",
                         type: 'pie',
                         data: [
                             {
@@ -84,8 +89,13 @@ export default {
                 title: {
                     text: '消费者流量分析'
                 },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                },
                 series: [
                     {
+                        name: "商品种类",
                         type: 'pie',
                         data: [
                             {

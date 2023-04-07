@@ -14,8 +14,13 @@ export default {
                 title: {
                     text: '仓库流量分析'
                 },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                },
                 series: [
                     {
+                        name: "商品种类",
                         type: 'pie',
                         data: [
                             {
@@ -46,10 +51,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.panel-button {
-    text-align: right;
-    margin: 0 5px;
-}
-</style>

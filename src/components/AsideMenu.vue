@@ -29,22 +29,22 @@
             <template #title>
                 <span>员工管理</span>
             </template>
-            <el-menu-item index="4-1">员工列表</el-menu-item>
-            <el-menu-item index="4-2">员工信息设置</el-menu-item>
+            <RouterLink to="/EmployeeList"><el-menu-item index="4-1">员工列表</el-menu-item></RouterLink>
+            <RouterLink to="/EmployeeInfoSetting"><el-menu-item index="4-2">员工信息设置</el-menu-item></RouterLink>
         </el-sub-menu>
         <el-sub-menu index="5">
             <template #title>
                 <span>货物管理</span>
             </template>
-            <el-menu-item index="5-1">货物列表</el-menu-item>
-            <el-menu-item index="5-2">货物信息设置</el-menu-item>
+            <RouterLink to="/GoodsList"><el-menu-item index="5-1">货物列表</el-menu-item></RouterLink>
+            <RouterLink to="/GoodsInfoSetting"><el-menu-item index="5-2">货物信息设置</el-menu-item></RouterLink>
         </el-sub-menu>
         <el-sub-menu index="6">
             <template #title>
                 <span>管理员信息管理</span>
             </template>
-            <el-menu-item index="6-1">管理员列表</el-menu-item>
-            <el-menu-item index="6-2">管理员信息设置</el-menu-item>
+            <RouterLink to="/AdministratorsList"><el-menu-item index="6-1">管理员列表</el-menu-item></RouterLink>
+            <RouterLink to="/AdministratorsInfoSetting"><el-menu-item index="6-2">管理员信息设置</el-menu-item></RouterLink>
         </el-sub-menu>
     </el-menu>
 </template>
@@ -54,7 +54,7 @@ export default {
     name: "AsideMenu",
     data() {
         return {
-            state: "disabled",
+            status: "disabled",
             menuHeight: ""
         }
     },
@@ -73,8 +73,4 @@ export default {
 </script>
 
 <style scoped>
-.cancal-style {
-    text-decoration: none;
-    color: #fff;
-}
 </style>

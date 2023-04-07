@@ -1,7 +1,7 @@
 <template>
     <el-card>
         <template #header>
-            会员列表           
+            仓库列表           
         </template>
         <el-table :data="tableData" style="width: 100%;margin-bottom: 15px;" height="700" border>
             <el-table-column prop="id" label="仓库号" width="200" />
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-    name: "AssociatorList",
+    name: "StorageList",
     data() {
         return {
             currentPage: "",

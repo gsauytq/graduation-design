@@ -29,6 +29,10 @@ export default {
                 legend: {
                     data: [this.firstData + '', this.secondData + ''],
                 },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'cross' }
+                },
                 series: [
                     {
                         name: this.firstData + '',

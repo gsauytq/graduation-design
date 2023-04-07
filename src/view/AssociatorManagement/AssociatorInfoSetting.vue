@@ -16,7 +16,7 @@
             </el-form-item>
             <el-form-item>
                 <el-button type="primary" @click="dialogVisible = true">添加会员</el-button>
-                <el-dialog v-model="dialogVisible" title="添加店铺" width="30%">
+                <el-dialog v-model="dialogVisible" title="添加会员" width="30%">
                     <el-form :model="addAssociatorInfo" label-width="120px" :inline="true">
                         <el-form-item required label="会员名：">
                             <el-input v-model="addAssociatorInfo.associatorName" class="add-form-style" placeholder="请输入会员名"></el-input>
@@ -28,8 +28,7 @@
                             </el-radio-group>
                         </el-form-item>
                         <el-form-item required label="年龄：">
-                            <el-input v-model="addAssociatorInfo.age" class="add-form-style" type="textarea" rows="5"
-                                placeholder="请输入年龄"></el-input>
+                            <el-input v-model="addAssociatorInfo.age" class="add-form-style" placeholder="请输入年龄"></el-input>
                         </el-form-item>
                         <el-form-item required label="手机号码：">
                             <el-input v-model="addAssociatorInfo.phone" class="add-form-style" placeholder="请输入手机号码"></el-input>
@@ -75,7 +74,7 @@
 import { reactive } from 'vue';
 
 export default {
-    name: "ShopInfoSetting",
+    name: "AssociatorInfoSetting",
     data() {
         return {
             dialogVisible: false,

@@ -1,7 +1,9 @@
 <template>
     <el-dropdown id="dropdown-id">
         <div class="el-dropdown-link" id="userInfo">
-            <span id="info-span" class="vertical-style">{{ userName }}</span>
+            <span id="info-span" class="vertical-style">
+                {{ userName }}
+            </span>
             <el-icon class="vertical-style">
                 <arrow-down />
             </el-icon>
@@ -18,6 +20,7 @@
 
 <script>
 import { ArrowDown } from '@element-plus/icons-vue'
+
 export default {
     name: "PersonInfo",
     components: {
@@ -25,7 +28,7 @@ export default {
     },
     data() {
         return {
-            userName: "UserName"
+            userName: "UserName",
         }
     }
 }
@@ -42,6 +45,7 @@ export default {
 .el-dropdown-link:focus {
     outline: none;
 }
+
 .vertical-style {
     vertical-align: middle;
 }
