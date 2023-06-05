@@ -19,11 +19,10 @@
 
 <script>
 export default {
-    name: "SearchForm",
+    name: "ShopList",
     data() {
         return {
             currentPage: "",
-            radio: "",
             tableData: [
                 
             ]

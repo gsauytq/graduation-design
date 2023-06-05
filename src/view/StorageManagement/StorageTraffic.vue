@@ -41,7 +41,6 @@
 
 <script>
 import { Search } from '@element-plus/icons-vue'
-import { reactive } from 'vue';
 import ShopSaleCharts from '../ShopManagement/charts/ShopSaleCharts.vue'
 import GoodsTypeCharts from './GoodsTypeCharts.vue';
 
@@ -54,11 +53,11 @@ export default {
     },
     data() {
         return {
-            storageInfo: reactive({
+            storageInfo: {
                 id: "",
                 status: "",
                 administrators: ""
-            }),
+            },
         }
     },
     methods: {

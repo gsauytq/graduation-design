@@ -14,10 +14,12 @@ import GoodsList from '../view/GoodsManagement/GoodsList.vue'
 import GoodsInfoSetting from '../view/GoodsManagement/GoodsInfoSetting.vue'
 import AdministratorsList from '../view/AdministratorsManagement/AdministratorsList.vue'
 import AdministratorsInfoSetting from '../view/AdministratorsManagement/AdministratorsInfoSetting.vue'
+import LoginView from '../view/Login/Login.vue'
+import LayoutContainer from '@/components/LayoutContainer.vue'
 
-const routes = [{
-        path: "/",
-        redirect: "/IndexPage",
+export const routes = [
+    {
+        path: '/', component: LoginView
     }, {
         path: '/IndexPage', component: IndexPage
     }, {
@@ -48,10 +50,12 @@ const routes = [{
         path: '/AdministratorsList', component: AdministratorsList
     }, {
         path: '/AdministratorsInfoSetting', component: AdministratorsInfoSetting
+    }, {
+        path: '/LayoutContainer', component: LayoutContainer
     }
 ]
 
 export default createRouter({
     history: createWebHashHistory(),
-    routes: routes
+    routes,
 })

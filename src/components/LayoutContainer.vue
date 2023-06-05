@@ -10,7 +10,7 @@
     </el-header>
     <el-container>
       <el-aside class="width-style">
-        <AsideMenu></AsideMenu>
+        <SystemAdminAsideMenu></SystemAdminAsideMenu>
       </el-aside>
       <el-main class="main" :style="{ height: mainHeight + 'px' }">
         <RouterView></RouterView>
@@ -20,7 +20,9 @@
 </template>
 
 <script>
-import AsideMenu from "./AsideMenu.vue";
+import SystemAdminAsideMenu from "./SystemAdminAsideMenu.vue"
+// import MallAdminAsideMenu from "./MallAdminAsideMenu.vue"
+// import ShopAdminAsideMenu from "./ShopAdminAsideMenu.vue"
 import LogoImg from "./Logo.vue"
 import PersonInfo from "./PersonInfo.vue"
 
@@ -32,9 +34,11 @@ export default {
     }
   },
   components: {
-    AsideMenu,
+    SystemAdminAsideMenu,
     LogoImg,
     PersonInfo,
+    // MallAdminAsideMenu,
+    // ShopAdminAsideMenu
   },
   mounted() {
     this.mainHeight = window.innerHeight - 60;

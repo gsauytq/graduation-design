@@ -9,6 +9,7 @@
 
 <script>
 import { Money } from '@element-plus/icons-vue';
+
 export default {
     name: "SaleDataView",
     data() {

@@ -52,7 +52,6 @@
 </template>
 
 <script>
-import { reactive } from 'vue';
 import { Search } from '@element-plus/icons-vue'
 import PageViewPanel from '../IndexPage/PageViewPanel.vue';
 import ConsumerCharts from './charts/ConsumerCharts.vue';
@@ -63,12 +62,12 @@ export default {
     name: "TrafficAnalysis",
     data() {
         return {
-            shopInfo: reactive({
+            shopInfo: {
                 shopName: "",
                 shopkeeperName: "",
                 status: "",
                 phone: ""
-            }),
+            },
         }
     },
     components: {
@@ -85,5 +84,3 @@ export default {
     }
 }
 </script>
-
-<style scoped></style>

@@ -34,10 +34,10 @@
         </el-sub-menu>
         <el-sub-menu index="5">
             <template #title>
-                <span>货物管理</span>
+                <span>商品管理</span>
             </template>
-            <RouterLink to="/GoodsList"><el-menu-item index="5-1">货物列表</el-menu-item></RouterLink>
-            <RouterLink to="/GoodsInfoSetting"><el-menu-item index="5-2">货物信息设置</el-menu-item></RouterLink>
+            <RouterLink to="/GoodsList"><el-menu-item index="5-1">商品列表</el-menu-item></RouterLink>
+            <RouterLink to="/GoodsInfoSetting"><el-menu-item index="5-2">商品信息设置</el-menu-item></RouterLink>
         </el-sub-menu>
         <el-sub-menu index="6">
             <template #title>
@@ -73,4 +73,7 @@ export default {
 </script>
 
 <style scoped>
+a{
+  text-decoration: none;
+}
 </style>
